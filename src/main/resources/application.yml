@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: spring-ai
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/receitas_ai?useUnicode=yes&characterEncoding=UTF-8
+    username: root
+    password: Guto!0001
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        boot:
+          allow_jdbc_metadata_access: false
+
+  ai:
+    openai:
+      api-key: ${OPEN_AI_API_KEY}
+    vertex:
+      ai:
+        gemini:
+          project-id: spring-ai-477313
+          location: us-east4
+          chat:
+            options:
+              model: gemini-2.0-flash
+              temperature: 0.5
