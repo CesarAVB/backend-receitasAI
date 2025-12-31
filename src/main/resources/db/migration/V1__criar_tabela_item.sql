@@ -1,0 +1,5 @@
+CREATE TABLE item (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    quantidade VARCHAR(50) NOT NULL
+);
